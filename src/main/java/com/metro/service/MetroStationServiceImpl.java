@@ -1,6 +1,7 @@
 package com.metro.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class MetroStationServiceImpl implements MetroStationService {
 	}
 
 	@Override
-	public MetroStation getMetroStation(int metroStationId) {
+	public Optional<MetroStation> getMetroStationById(int metroStationId) {
 		return metroStationDao.findById(metroStationId);
 	}
 
